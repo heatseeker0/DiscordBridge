@@ -1,0 +1,8 @@
+name: DiscordBridge
+main: com.mcspacecraft.discordbridge.DiscordBridge
+version: 1.0
+description: Bridge between Discord and Minecraft chat
+author: heatseeker0
+commands:
+   discordbridge:
+      description: Discord bridge command

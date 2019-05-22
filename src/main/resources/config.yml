@@ -1,0 +1,72 @@
+# This is your discord bots token. If you do
+# not have a discord bot user, you can create one
+# here: https://discordapp.com/developers
+bot-token: ""
+
+# Your discord guild ID. This is the
+# ID of your discord server the bot will
+# be running on. This can be found here ->
+# http://prntscr.com/i9ov0q
+guild-id: ""
+
+# Settings for your discord
+discord:
+   # These are the discord channels that
+   # the minecraft chat will be sent to
+   minecraft-chat-channels:
+      - "general"
+
+
+   # This is the format of the chat that will display in the text channel when a message comes through from in-game.
+   # (The format of the message that will be sent to the discord when a player types in-game)
+   # Placeholders:
+   # {PLAYER} = Player name
+   # {DISPLAYNAME} = Players displayname
+   # {MESSAGE} = Message
+   chat-format: "**{DISPLAYNAME}**: *{MESSAGE}*"
+
+
+# Settings for your minecraft server
+minecraft:
+   # The channel names here are the channels that will bridge to
+   # the server and send a message. For example, any message that is
+   # sent in "general", will be displayed in-game on the server!
+   channels:
+      - "general"
+
+
+   # This is the format for the chat when a player is in "discord chat mode" (/discordchat toggle)
+   # (The format of the message when a user has "Discord Chat Mode" enabled)
+   # Placeholders:
+   # {PLAYER} = Player name
+   # {MESSAGE} = Message
+   minecraft-format: "&a(DC) &a&l{PLAYER}: &f{MESSAGE}"
+
+
+   # This is the format of the chat in-game if the player has discord chat channel enabled.
+   # (The message that will display in-game if someone speaks in discord)
+   # Placeholders:
+   # {USER} = Username
+   # {NICK} = Users Nickname
+   # {MESSAGE} = Message
+   # {ID} = User ID
+   chat-format: "&d[DC] &f&l{USER}#{ID} &7&o({NICK}): &f{MESSAGE}"
+
+
+   # Should the plugin use permissions
+   # to send to message from Discord to
+   # minecraft chat. This has replaced
+   # `see-through-toggle`. False by default
+   use-permission: false
+
+
+# Messages for both minecraft and discord
+messages:
+  no-permission: "&c&l(!) &cOh.. Looks like you don't have permission to do that."
+  no-guild-id: "&c&l(!) &cThe guild ID has not been set, you should probably tell someone :)"
+  player-only: "Only players can use this command"
+  config-reload: "&a&l(!) &aThe config has been reloaded"
+  token-set: "&a&l(!) &aYou have set the bot token to: &n{TOKEN}"
+  id-set: "&a&l(!) &aYou have set the guild ID to: &n{ID}"
+  toggle-on: "&e&l(!) &eDiscord chat toggled: &a&lON\n&7&o(( You will now &nbe able&7&o to send\n&7&oand receive discord messages ))"
+  toggle-off: "&e&l(!) &eDiscord chat toggled: &c&lOFF\n&7&o(( You will &nno longer&7&o be able to send\n&7&oand receive discord messages ))"
